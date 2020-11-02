@@ -1,4 +1,4 @@
-name: Linux
+name: windows
 
 on: [push]
 
