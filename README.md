@@ -1,4 +1,4 @@
-# Nexus-Boilerplate ![linux](https://github.com/rramiachraf/nexus-boilerplate/workflows/linux/badge.svg) ![windows](https://github.com/rramiachraf/nexus-boilerplate/workflows/windows/badge.svg)
+# Nexus-Boilerplate ![ci](https://github.com/rramiachraf/nexus-boilerplate/workflows/ci/badge.svg?branch=main)
 Code-First GraphQL server.
 
 ## Usage
