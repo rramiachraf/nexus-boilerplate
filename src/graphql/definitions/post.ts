@@ -7,19 +7,15 @@ import {
 } from '@nexus/schema'
 import { randomBytes } from 'crypto'
 
-type PostsArray = {
+interface Post {
   id: string
   title: string
   body?: string | null | undefined
-}[]
+}
 
-const posts: PostsArray = [
-  {
-    id: '156045f99n',
-    title: 'First post',
-    body: null
-  }
-]
+type PostsArray = Post[]
+
+const posts: PostsArray = []
 
 export const Post = objectType({
   name: 'Post',
@@ -43,15 +39,10 @@ export const addPost = mutationField('addPost', {
   }
 })
 
-export const post = queryField('post', {
+export const post = queryField('posts', {
   type: 'Post',
-  nullable: true,
-  args: { id: idArg({ required: true }) },
-  resolve(_, { id }) {
-    const post = posts.find(post => post.id === id)
-    if (!post) {
-      return null
-    }
-    return post
+  list: true,
+  resolve() {
+    return posts
   }
 })

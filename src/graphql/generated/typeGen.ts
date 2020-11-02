@@ -63,7 +63,7 @@ export interface NexusGenFieldTypes {
   }
   Query: { // field return type
     me: NexusGenRootTypes['User'] | null; // User
-    post: NexusGenRootTypes['Post'] | null; // Post
+    posts: Array<NexusGenRootTypes['Post'] | null> | null; // [Post]
   }
   User: { // field return type
     email: string | null; // String
@@ -85,7 +85,7 @@ export interface NexusGenFieldTypeNames {
   }
   Query: { // field return type name
     me: 'User'
-    post: 'Post'
+    posts: 'Post'
   }
   User: { // field return type name
     email: 'String'
@@ -108,11 +108,6 @@ export interface NexusGenArgTypes {
     login: { // args
       password: string; // String!
       username: string; // String!
-    }
-  }
-  Query: {
-    post: { // args
-      id: string; // ID!
     }
   }
 }

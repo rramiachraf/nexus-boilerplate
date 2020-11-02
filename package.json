@@ -1,13 +1,13 @@
 {
   "name": "nexus-boilerplate",
   "version": "1.0.0",
-  "main": "./build/index.js",
+  "main": "./build/server.js",
   "license": "MIT",
   "scripts": {
-    "dev": "ts-node-dev --respawn src/index.ts",
+    "dev": "ts-node-dev --respawn src/server.ts",
     "build": "tsc",
     "test": "jest",
-    "start": "node ./build/index.js"
+    "start": "node ./build/server.js"
   },
   "dependencies": {
     "@nexus/schema": "^0.17.0",
@@ -20,6 +20,7 @@
     "@types/dotenv": "^8.2.0",
     "@types/express": "^4.17.8",
     "@types/jest": "^26.0.15",
+    "apollo-server-testing": "^2.19.0",
     "jest": "^26.6.1",
     "ts-jest": "^26.4.3",
     "ts-node-dev": "^1.0.0",

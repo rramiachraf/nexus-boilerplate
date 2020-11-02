@@ -16,7 +16,7 @@ type Post {
 
 type Query {
   me: User
-  post(id: ID!): Post
+  posts: [Post]
 }
 
 type User {

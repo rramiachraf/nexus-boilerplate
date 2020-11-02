@@ -62,6 +62,6 @@ export const me = queryField('me', {
   type: 'User',
   nullable: true,
   resolve() {
-    return users[0]
+    return users[users.length - 1]
   }
 })
